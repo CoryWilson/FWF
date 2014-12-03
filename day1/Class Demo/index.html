@@ -1,0 +1,24 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Our Second First Angular App</title>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+    </head>
+    <body ng-app>
+        <div ng-controller="myController">
+            <form ng-submit="onButtonClick()">
+                <p><input type="text" ng-model="myFriends"/></p>
+                <button type="submit">click me!</button>
+            </form>
+            <p>You have {{ array.length }} friends.</p>
+            <ul>
+                <li ng-repeat="item in array track by $index">                         {{item}}
+                    <a ng-click="removeItem($index)">X</a>
+                </li>
+            </ul>
+            
+        </div>
+        
+    </body>
+</html>

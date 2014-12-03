@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Our Second Angular App</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body ng-app="myMovieApp" ng-controller="myController">
+    <form ng-submit="formSubmit()">
+      <label for="theMovieTitle">
+        Title:
+        <input id="theMovieTitle" type="text" ng-model="movie.title" />
+      </label>
+      <label for="theMovieRating">
+        Rating:
+        <select id="theMovieRating" ng-model="movie.rating">
+          <option>G</option>
+          <option>PG</option>
+          <option>PG-13</option>
+          <option>R</option>
+          <option>NC-17</option>
+        </select>
+      </label>
+      <label for="theMovieRelease">
+        Release Year:
+        <select id="theMovieRelease" ng-model="movie.release">
+          <option>2016</option>
+          <option>2015</option>
+          <option>2014</option>
+          <option>2013</option>
+          <option>2012</option>
+          <option>2011</option>
+          <option>2010</option>
+          <option>2009</option>
+          <option>2008</option>
+          <option>2007</option>
+          <option>2006</option>
+          <option>2005</option>
+          <option>2004</option>
+          <option>2003</option>
+          <option>2002</option>
+          <option>2001</option>
+          <option>2000</option>
+          <option>1999</option>
+          <option>1998</option>
+          <option>1997</option>
+          <option>1996</option>
+          <option>1995</option>
+          <option>1994</option>
+          <option>1993</option>
+          <option>1992</option>
+          <option>1991</option>
+          <option>1990</option>
+          <option>Old As Shit</option>
+        </select>
+      </label>
+      <button type="submit">Add</button>
+    </form>
+    <ul>
+      <li ng-repeat="mov in movieArray track by $index">
+        {{mov.title}} - {{mov.rating}} - {{mov.release}}
+        <button ng-click="movieDelete($index)">X</button>
+      </li>
+    </ul>
+  </body>
+</html>

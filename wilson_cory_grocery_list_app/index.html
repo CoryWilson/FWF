@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--***********************
+  Cory Wilson
+  FWF1412
+  Grocery Store App HTML
+************************-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grocery List App</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body ng-app="groceryListApp" ng-controller="groceryListController">
+  <div class="wrapper">
+    <form name="myForm" ng-submit="formSubmit()">
+      <h1>My Grocery List</h1>
+      <div>
+        <label for="theItemName">Item Name:</label>
+        <input id="theItemName" name="theItemName" type="text" ng-model="item.name" required/>
+        <button type="submit" ng-disabled="myForm.$invalid">Add Item</button>
+      </div>
+      <span class="error" ng-show="myForm.input.$error.required">An Item is Required!</span>
+    </form>
+    <ul>
+      <li ng-repeat="it in list track by $index">
+        {{it.name}}
+        <button ng-click="itemDelete($index)"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="95.938px" height="95.952px" viewBox="2.031 2.03 95.938 95.952" enable-background="new 2.031 2.03 95.938 95.952"
+          xml:space="preserve">
+          <path d="M64.85,50l32.533-32.534c0.781-0.781,0.781-2.047,0-2.828L85.363,2.616c-0.375-0.375-0.885-0.586-1.414-0.586
+          c-0.53,0-1.039,0.211-1.414,0.586L50,35.151L17.465,2.616c-0.75-0.75-2.078-0.75-2.828,0L2.617,14.638c-0.781,0.781-0.781,2,0,2.8
+          L35.151,50L2.617,82.534c-0.781,0.78-0.781,2,0,2.827l12.02,12.021c0.375,0.4,0.9,0.6,1.4,0.6s1.039-0.211,1.414-0.586L50,64.85
+          l32.535,32.534c0.375,0.4,0.9,0.601,1.4,0.586c0.5-0.014,1.039-0.211,1.414-0.586l12.02-12.021c0.781-0.781,0.781-2.047,0-2.828
+          L64.85,50z"/>
+        </svg>
+      </button>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

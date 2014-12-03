@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ouf First Angular App</title>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+  </head>
+  <body ng-app><!--the app definition-->
+    <div ng-controller="myController"><!--the logic-->
+      <input type="text" ng-model="myFriends"/><!--data binding-->
+      <!--ng-model is two way {{}} is one way-->
+      <button ng-click="onButtonClick()">Click</button>
+      <ul>
+        <li ng-repeat="item in myArray track by $index">{{item}}</li>
+        <a ng-click="removeItem($index)">X</a>
+      </ul>
+    </div>
+
+
+
+  </body>
+</html>

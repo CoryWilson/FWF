@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Favorite Pokemon</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+</head>
+<body ng-app="myPokemonApp">
+    <div ng-controller="myPokemonController">
+    <h1> My Favorite Pokemon</h1>
+    <form ng-submit="submit()">
+        <label for="name">
+            Name:
+        <input id="name" name="name" type="text" ng-model="pokemon.name">
+        </label>
+        <label for="power">
+            Power:
+        <input id="power" name="power" type="text" ng-model="pokemon.power">
+        </label>
+        <button type="submit">Click Me To Submit</button>
+    </form>
+        <ul>
+            <li ng-repeat="poke in myPokemon track by $index">{{poke.name}} - {{poke.power}}</li>
+        </ul>
+    </div>
+</body></html>

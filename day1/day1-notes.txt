@@ -1,0 +1,33 @@
+first 3 weeks angular
+last week research and presentation on another framework
+
+MVC Seperation
+Model
+View
+Controller
+
+Reusable code
+-Don't change code, change vehicle
+
+Data Binding
+-Live templating, put placeholders in and it listens automatically and updates realtime
+
+
+directives
+
+
+<body ng-app><!--defining parent app-->
+  <div ng-controller="MyFirstController"><!--directive-->
+    <p>{{ 5 + 5 }}</p><!--i want you to parse what's in here-->
+    <p>
+      <input type="text" ng-model="test" />
+    </p>
+    <p>{{ test }}</p>
+    <button ng-click="onButtonClick()">This button has been clicked {{numClicks}} times</button>
+
+    <ul>
+      <li ng-repeat="item in myArray track by $index">{{item}}</li><!--ng-repeat is like a for each loop | put it on the node that you want to repeat <li> in this instance-->
+    </ul>
+    
+  </div>
+</body>

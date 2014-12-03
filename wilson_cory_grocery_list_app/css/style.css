@@ -1,0 +1,82 @@
+/************************
+  Cory Wilson
+  FWF1412
+  Grocery Store App CSS
+************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: helvetica,arial,sans-serif;
+  color: #EDEBDB;
+}
+header {
+  background: #999;
+}
+.wrapper {
+  background: #42423D;
+  width: 800px;
+  margin: 30px auto;
+  box-shadow: 2px 2px 5px #1D2B3D;
+  overflow: hidden;
+}
+form div {
+  width: 98%;
+  margin: 30px auto;
+  overflow: hidden;
+}
+form h1 {
+  margin: 30px;
+  text-align: center;
+}
+form label {
+  width: 16%;
+  line-height: 1.25em;
+  margin: 10px 15px 0 0;
+  text-align: right;
+  float: left;
+}
+form input {
+  background: #E1D1AC;
+  width: 53.75%;
+  padding: 10px 5px;
+  border: none;
+  line-height: 1.25em;
+  float: left;
+  box-shadow: 2px 2px 5px #1D2B3D;
+}
+form button {
+  margin: 0 0 0 15px;
+  width: 20%;
+  padding: 10px 5px;
+  border: none;
+  background: #6D9C79;
+  line-height: 1.25em;
+  float: left;
+  box-shadow: 2px 2px 5px #1D2B3D;
+}
+form button:hover {
+  background: #C44E62;
+}
+ul {
+  list-style: none;
+  width: 65%;
+  margin: 0 auto;
+}
+li {
+  margin: 30px 0;
+}
+li button {
+  margin-left: 20px;
+  background: none;
+  border: none;
+}
+svg {
+  fill: #6D9C79;
+  width: 25px;
+  height: 25px;
+}
+svg:hover {
+  fill: #C44E62;
+}
