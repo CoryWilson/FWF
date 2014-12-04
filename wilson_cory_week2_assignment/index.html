@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--/********************
+  Cory Wilson
+  FWF1412
+  Week 2 Assignment
+********************/-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Employee Directory Application</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400italic,300,700,400" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/service.js"></script>
+  </head>
+  <body ng-app="EmpDirApp" ng-controller="mainController">
+
+    <header>
+      <div class="wrapper">
+        <h1>Initech</h1>
+        <button ng-click="showForm=!showForm" class="addButton">Add New Employee
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+          <polygon points="100,37.5 62.5,37.5 62.5,0 37.5,0 37.5,37.5 0,37.5 0,62.5 37.5,62.5 37.5,100 62.5,100 62.5,62.5 100,62.5 "/>
+        </svg>
+      </button>
+      </div>
+    </header>
+    <div class="wrapper">
+      <h2>Employee Directory</h2>
+      <form ng-submit="addEmployee()" ng-show="showForm" class="addEmployee">
+        <label for="employeeFName">
+          <input id="employeeFName" type="text" placeholder="First Name" ng-model="employeeInput.fName" required/>
+        </label>
+        <label for="employeeLName">
+          <input id="employeeLName" type="text" placeholder="Last Name" ng-model="employeeInput.lName" required/>
+        </label>
+        <label for="employeeJobTitle">
+          <input id="employeeJobTitle" type="text" placeholder="Job Title" ng-model="employeeInput.jobTitle" required/>
+        </label>
+        <button>Submit</button>
+      </form>
+      <div ng-repeat="e in employeeArray track by $index" class="employee">
+        <div>
+          <img src="img/avatar.svg" alt="Avatar" />
+          <div class="info">
+            <span>{{e.fName}} {{e.lName}}</span>
+            <span>{{e.jobTitle}}</span>
+          </div>
+          <button ng-click="removeEmployee()">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="88.389px" height="88.389px" viewbox="5.806 5.806 88.389 88.389" enable-background="new 5.806 5.806 88.389 88.389"
+            xml:space="preserve">
+            <polygon points="94.194,76.517 67.678,50 94.194,23.483 76.517,5.806 50,32.322 23.483,5.806 5.806,23.483 32.322,50 5.806,76.517
+            23.483,94.194 50,67.678 76.517,94.194 "/>
+          </svg>
+
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

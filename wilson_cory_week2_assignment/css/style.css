@@ -1,0 +1,165 @@
+/********************
+  Cory Wilson
+  FWF1412
+  Week 2 Assignment
+********************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 62.5%/1.5 'Roboto',Helvetica,Sans-Serif;
+}
+h1 {
+  font-size: 4em;
+}
+h2,span:first-of-type {
+  font-size: 3em;
+}
+h3,.addButton {
+  font-size: 2em;
+}
+p,input,button,span:last-of-type {
+  font-size: 1.8em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  background: #193441;
+  box-shadow: 0 2px 3px #193441;
+  overflow: hidden;
+}
+header h1 {
+  color: #FCFFF5;
+  margin: 30px 0;
+  float: left;
+}
+.addButton {
+  border: 3px solid #FCFFF5;
+  color: #FCFFF5;
+  border-radius: 3px;
+  background: none;
+  fill: #FCFFF5;
+  height: 60px;
+  padding: 0 10px;
+  margin: 30px 0;
+  float: right;
+}
+.addButton:hover {
+  border: 3px solid #91AA9D;
+  color: #91AA9D;
+  fill: #91AA9D;
+}
+
+.addButton svg {
+  width: 10px;
+  height: 13px;
+}
+
+.wrapper h2 {
+  margin-top: 30px;
+}
+
+/******Add Employee Form*****/
+.addEmployee {
+  margin: 30px auto;
+  overflow: hidden;
+  background: #D1DBBD;
+}
+.addEmployee label {
+  margin: 0 auto;
+  float: left;
+  clear: left;
+}
+
+.addEmployee input[type="text"] {
+  border: none;
+  border-bottom: 2px solid #193441;
+  line-height: 1.5em;
+  padding: 5px 10px 0 10px;
+  background: none;
+}
+
+  /******Input Placeholder******/
+  input[type="text"]::-webkit-input-placeholder {
+    color: #fff;
+    text-transform: uppercase;
+  }
+  input[type="text"]::-moz-placeholder {
+    color: #fff;
+    text-transform: uppercase;
+  }
+  input[type="text"]:-moz-placeholder {   /* Older versions of Firefox */
+    color: #fff;
+    text-transform: uppercase;
+  }
+  input[type="text"]:-ms-input-placeholder {
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+.addEmployee input[type="text"]:focus {
+  outline: none;
+  border-bottom: 2px solid #3E606F;
+}
+.addEmployee button {
+  float: left;
+  clear: left;
+  margin: 15px auto;
+  border: 2px solid #193441;
+  color: #193441;
+  border-radius: 3px;
+  background: none;
+  padding: 5px;
+}
+.addEmployee button:hover {
+  border: 2px solid #3E606F;
+  color: #3E606F;
+}
+
+/*****Employee Info Item*****/
+.employee {
+  margin: 15px auto;
+  border: 3px solid #193441;
+  border-radius: 3px;
+  background: #FCFFF5;
+  padding: 30px;
+  overflow: hidden;
+}
+.employee div {
+  width: 100%;
+}
+.employee img {
+  background: #91AA9D;
+  width: 100px;
+  display: block;
+  margin: 0;
+}
+.info {
+  width: 300px;
+}
+.employee button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: #193441;
+  border-radius: 3px;
+  background: none;
+  fill: #193441;
+}
+.employee svg {
+  width: 50px;
+  height: 50px;
+}
+.employee button:hover{
+  fill: #91AA9D;
+}
