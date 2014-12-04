@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--***********
+  Cory Wilson
+  FWF1412
+  Day3
+************-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Super Hero App</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/service.js"></script>
+  </head>
+  <body ng-app="myLSApp" ng-controller="mainController">
+    <form ng-submit="addHero()">
+      <label for="heroName">
+        Name:
+        <input id="heroName" type="text" ng-model="heroInput.name" />
+      </label>
+      <label for="heroAlias">
+        Alias:
+        <input id="heroAlias" type="text" ng-model="heroInput.alias" />
+      </label>
+      <label for="heroPower">
+        Super-Power:
+        <input id="heroPower" type="text" ng-model="heroInput.power" />
+      </label>
+      <button>Submit</button>
+    </form>
+
+    <ol>
+      <li ng-repeat="h in heroArray track by $index">
+        <b>{{h.name}}</b><br/>
+        <i>{{h.alias}}</i>
+        <button ng-click="removeHero()">X</button>
+      </li>
+    </ol>
+
+  </body>
+</html>
