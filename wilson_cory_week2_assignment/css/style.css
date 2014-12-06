@@ -72,21 +72,23 @@ header h1 {
 /******Add Employee Form*****/
 .addEmployee {
   margin: 30px auto;
+  width: 50%;
   overflow: hidden;
   background: #D1DBBD;
 }
-.addEmployee label {
+.addEmployee div {
+  overflow:hidden;
   margin: 0 auto;
-  float: left;
-  clear: left;
+  width: 90%;
 }
-
 .addEmployee input[type="text"] {
   border: none;
   border-bottom: 2px solid #193441;
   line-height: 1.5em;
   padding: 5px 10px 0 10px;
   background: none;
+  float: left;
+  clear: left;
 }
 
   /******Input Placeholder******/

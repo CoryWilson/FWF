@@ -30,16 +30,15 @@
     <div class="wrapper">
       <h2>Employee Directory</h2>
       <form ng-submit="addEmployee()" ng-show="showForm" class="addEmployee">
-        <label for="employeeFName">
-          <input id="employeeFName" type="text" placeholder="First Name" ng-model="employeeInput.fName" required/>
-        </label>
-        <label for="employeeLName">
-          <input id="employeeLName" type="text" placeholder="Last Name" ng-model="employeeInput.lName" required/>
-        </label>
-        <label for="employeeJobTitle">
-          <input id="employeeJobTitle" type="text" placeholder="Job Title" ng-model="employeeInput.jobTitle" required/>
-        </label>
-        <button>Submit</button>
+        <div>
+          <label for="employeeFName"></label>
+            <input id="employeeFName" type="text" placeholder="First Name" ng-model="employeeInput.fName" required/>
+          <label for="employeeLName"></label>
+            <input id="employeeLName" type="text" placeholder="Last Name" ng-model="employeeInput.lName" required/>
+          <label for="employeeJobTitle"></label>
+            <input id="employeeJobTitle" type="text" placeholder="Job Title" ng-model="employeeInput.jobTitle" required/>
+          <button>Submit</button>
+        </div>
       </form>
       <div ng-repeat="e in employeeArray track by $index" class="employee">
         <div>
@@ -48,7 +47,7 @@
             <span>{{e.fName}} {{e.lName}}</span>
             <span>{{e.jobTitle}}</span>
           </div>
-          <button ng-click="removeEmployee()">
+          <button ng-click="removeEmployee($index)">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="88.389px" height="88.389px" viewbox="5.806 5.806 88.389 88.389" enable-background="new 5.806 5.806 88.389 88.389"
             xml:space="preserve">

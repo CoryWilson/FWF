@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title></title>
+    <script                        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript" ></script>
+    <script src="js/service.js" type="text/javascript"></script>
+    </head>
+<body ng-app="employeeApp" ng-controller="myController">
+    <form ng-submit="addEmployee()">
+        <label for="eName">Employee Name: </label>
+        <input type="text" id="eName" ng-model="employees.name"/>
+    <br />
+        <label for="ePosition">Employee Position: </label>
+        
+        <select id="ePosition" ng-model="employees.position">
+            <option value="">Position</option>
+            <option value="Boss">Boss</option>
+            <option value="Doesn't Matter">Doesn't Matter</option>
+            <option value="You're Fired">You're Fired</option>
+        </select>
+    <br />
+        <label for="eAge">Employee Age: </label>
+        <input type="number" min="18" max="150" id="eAge" 
+               ng-model="employees.age"/>
+        <button type="submit">Submit</button>
+    </form>
+    
+     <select id="ePosition" ng-model="filterSelect.position">
+            <option value="">View All</option>
+            <option value="Boss">Boss</option>
+            <option value="Doesn't Matter">Doesn't Matter</option>
+            <option value="You're Fired">You're Fired</option>
+        </select>
+    
+    <ul id="employeeList">
+        <li class="employees" ng-repeat="emp in employeeArray |filter:filterSelect track by $index">
+            {{emp.name}} 
+            <br>
+            {{emp.position}}
+            <br>
+            {{emp.age}}
+            <br>
+            <button ng-click = "removeEmployee($index)">X</button>
+        </li>
+    </ul>
+    <b>Bosses</b>
+    <ul id="employeeList">
+        <li class="employees" ng-repeat="emp in employeeArray |filter:'Boss' track by $index">
+            {{emp.name}} 
+            <br>
+            {{emp.position}}
+            <br>
+            {{emp.age}}
+            <br>
+            <button ng-click = "removeEmployee($index)">X</button>
+        </li>
+    </ul>
+     <b>Peon</b>
+    <ul id="employeeList">
+        <li class="employees" ng-repeat="emp in employeeArray |filter:'Doesn\'t Matter' track by $index">
+            {{emp.name}} 
+            <br>
+            {{emp.position}}
+            <br>
+            {{emp.age}}
+            <br>
+            <button ng-click = "removeEmployee($index)">X</button>
+        </li>
+    </ul>
+</body>
+</html>
