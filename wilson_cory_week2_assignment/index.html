@@ -36,6 +36,8 @@
             <input id="employeeLName" type="text" placeholder="Last Name" ng-model="employeeInput.lName" required/>
           <label for="employeeJobTitle"></label>
             <input id="employeeJobTitle" type="text" placeholder="Job Title" ng-model="employeeInput.jobTitle" required/>
+          <label for="employeeEmail"></label>
+            <input id="employeeEmail" type="email" placeholder="Email" ng-model="employeeInput.email" required/>
           <button>Submit</button>
       </form>
       <div ng-repeat="e in employeeArray track by $index" class="employee">
@@ -51,6 +53,7 @@
         <div class="info">
           <span>{{e.fName}} {{e.lName}}</span>
           <span>{{e.jobTitle}}</span>
+          <span>{{e.email}}</span>
         </div>
       </div>
     </div>
