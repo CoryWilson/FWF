@@ -27,6 +27,9 @@ p,input,button,span:last-of-type {
 img {
   max-width: 100%;
 }
+button:focus{
+  outline: none;
+}
 
 .wrapper {
   width: 960px;
@@ -44,68 +47,65 @@ header h1 {
   float: left;
 }
 .addButton {
-  border: 3px solid #FCFFF5;
-  color: #FCFFF5;
-  border-radius: 3px;
   background: none;
+  color: #FCFFF5;
   fill: #FCFFF5;
   height: 60px;
   padding: 0 10px;
+  border: 3px solid #FCFFF5;
+  border-radius: 3px;
   margin: 30px 0;
   float: right;
 }
 .addButton:hover {
-  border: 3px solid #91AA9D;
   color: #91AA9D;
   fill: #91AA9D;
+  border: 3px solid #91AA9D;
 }
-
 .addButton svg {
   width: 10px;
   height: 13px;
 }
-
 .wrapper h2 {
   margin-top: 30px;
 }
 
 /******Add Employee Form*****/
 .addEmployee {
+  background: #FCFFF5;
+  width: 66.66666666%;
+  padding: 30px 0;
   margin: 30px auto;
-  width: 50%;
+  border: 3px solid #193441;
+  border-radius: 3px;
   overflow: hidden;
-  background: #D1DBBD;
-}
-.addEmployee div {
-  overflow:hidden;
-  margin: 0 auto;
-  width: 90%;
 }
 .addEmployee input[type="text"] {
+  width: 80%;
+  display: block;
   border: none;
   border-bottom: 2px solid #193441;
   line-height: 1.5em;
-  padding: 5px 10px 0 10px;
+  padding: 5px 0 0 0;
+  margin: 15px auto;
   background: none;
-  float: left;
-  clear: left;
 }
 
   /******Input Placeholder******/
   input[type="text"]::-webkit-input-placeholder {
-    color: #fff;
+    color: #3E606F;
     text-transform: uppercase;
   }
   input[type="text"]::-moz-placeholder {
-    color: #fff;
+    color: #3E606F;
     text-transform: uppercase;
   }
   input[type="text"]:-moz-placeholder {   /* Older versions of Firefox */
-    color: #fff;
+    color: #3E606F;
     text-transform: uppercase;
   }
   input[type="text"]:-ms-input-placeholder {
-    color: #fff;
+    color: #3E606F;
     text-transform: uppercase;
   }
 
@@ -114,53 +114,60 @@ header h1 {
   border-bottom: 2px solid #3E606F;
 }
 .addEmployee button {
-  float: left;
-  clear: left;
-  margin: 15px auto;
-  border: 2px solid #193441;
-  color: #193441;
+  background: #193441;
+  color: #FCFFF5;
+  width: 60%;
+  padding: 10px 0;
+  border: none;
   border-radius: 3px;
-  background: none;
-  padding: 5px;
+  margin: 15px auto;
+  display: block;
 }
 .addEmployee button:hover {
-  border: 2px solid #3E606F;
-  color: #3E606F;
+  background: #91AA9D;
 }
 
 /*****Employee Info Item*****/
 .employee {
-  margin: 15px auto;
+  background: #FCFFF5;
+  width: 30%;
+  padding: 30px 0 0;
   border: 3px solid #193441;
   border-radius: 3px;
-  background: #FCFFF5;
-  padding: 30px;
+  margin: 15px 1%;
+  position: relative;
+  float: left;
   overflow: hidden;
-}
-.employee div {
-  width: 100%;
 }
 .employee img {
   background: #91AA9D;
   width: 100px;
+  margin: 0 auto;
   display: block;
-  margin: 0;
 }
-.info {
-  width: 300px;
+.employee span {
+  width: 80%;
+  margin: 5px auto;
+  display: block;
+}
+.employee span:last-of-type {
+  margin: 5px auto 30px auto;
 }
 .employee button {
-  width: 50px;
-  height: 50px;
-  border: none;
-  color: #193441;
-  border-radius: 3px;
   background: none;
+  color: #193441;
   fill: #193441;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 3px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 .employee svg {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
 }
 .employee button:hover{
   fill: #91AA9D;
