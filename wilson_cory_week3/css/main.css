@@ -1,0 +1,49 @@
+/***** Project Variables *****/
+/***** Typography Variables *****/
+/***** Color Variables *****/
+/* #bf1652 */
+/* #778585 */
+/* #a4d4b4 */
+/* #dde2c6 */
+/* #f4f482 */
+header {
+  background: url('../img/golden_gate.jpg'); }
+  header h1 {
+    float: left; }
+  header a {
+    color: #778585;
+    border: 2px solid #778585;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    float: right; }
+
+header {
+  height: 200px;
+  overflow: hidden; }
+  header h1 {
+    margin: 30px; }
+
+div {
+  height: 300px;
+  border: 1px solid #778585;
+  margin: 30px; }
+
+body {
+  font-family: 'proxima-nova', sans-serif; }
+
+h1, h2, h3, h4 {
+  font-family: 'coquette', serif; }
+
+.map {
+  background: #bf1652; }
+
+.bar_chart {
+  background: #a4d4b4; }
+
+.image_gal {
+  background: #dde2c6; }
+
+.data_viz {
+  background: #f4f482; }

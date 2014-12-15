@@ -1,0 +1,19 @@
+/***** Project Variables *****/
+
+/***** Typography Variables *****/
+$heading-font : 'coquette',serif;
+$main-font    : 'proxima-nova',sans-serif;
+
+/***** Color Variables *****/
+$pink   : rgba(191, 22, 82, 1);   /* #bf1652 */
+$grey   : rgba(119, 133, 133, 1); /* #778585 */
+$green  : rgba(164, 212, 180, 1); /* #a4d4b4 */
+$tan    : rgba(221, 226, 198, 1); /* #dde2c6 */
+$yellow : rgba(244, 244, 130, 1); /* #f4f482 */
+
+
+@import
+"base",
+"layout",
+"typography",
+"color";

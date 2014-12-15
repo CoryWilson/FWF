@@ -1,0 +1,15 @@
+header {
+  background: url('../img/golden_gate.jpg');
+  h1 {
+    float: left;
+  }
+  a {
+    color: $grey;
+    border:2px solid $grey;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    float: right;
+  }
+}

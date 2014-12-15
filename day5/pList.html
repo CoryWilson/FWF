@@ -1,0 +1,6 @@
+<h1>Cupcakes!</h1>
+<div ng-repeat="c in cakes track by $index">
+  <p>{{c.cake}} Cake with {{c.frosting}} Frosting.</p>
+  <p>{{c.price | currency}}</p>
+  <a href="#/edit/{{$index}}">Edit</a>
+</div>
