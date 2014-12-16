@@ -1,12 +1,69 @@
-header{
-  height: 200px;
+.container {
+  max-width: 1020px;
+  margin: 30px auto;
+  padding: 1%;
+  border: 1px solid $dark;
   overflow: hidden;
-  h1 {
-    margin: 30px;
+}
+
+header {
+  text-align: center;
+}
+
+.car-info {
+  position: relative;
+  width: 30.33333333%;
+  padding: 1%;
+  margin: 1% .5%;
+  float: left;
+  a {
+    padding: 5px 2%;
+  }
+  button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
   }
 }
-div {
-  height: 300px;
-  border: 1px solid $grey;
-  margin: 30px;
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  div{
+    width: 98%;
+    margin: 10px auto;
+    float: left;
+    clear: left;
+    label:not(.radio){
+      float: left;
+      clear: left;
+      text-align: right;
+      margin-right: 15px;
+      width: 125px;
+    }
+    select,
+    input[type="text"],
+    input[type="radio"]{
+      border: 1px solid $dark;
+    }
+    input[type="text"]{
+      line-height: 1.5em;
+      padding: 5px 1%;
+      width: 300px;
+    }
+    .radio{
+      padding-left: 5px;
+    }
+    select {
+      width: 310px;
+    }
+  }
+  .button-style{
+    font-size: 18px;
+    width: 50%;
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+  }
 }

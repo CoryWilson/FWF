@@ -1,0 +1,52 @@
+/***** Project Variables *****/
+/***** Typography Variables *****/
+/***** Color Variables *****/
+/* #bf1652 */
+/* #778585 */
+/* #a4d4b4 */
+/* #dde2c6 */
+/* #f4f482 */
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 30px; }
+
+.center-it {
+  margin: 0 auto;
+  overflow: hidden; }
+
+.photobox {
+  width: 31.33333%;
+  float: left;
+  margin: 10px 1%;
+  border-radius: 5px; }
+  .photobox img {
+    display: block;
+    margin: 10px auto; }
+  .photobox h3 {
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center; }
+
+.theForm {
+  position: absolute;
+  top: 5px;
+  right: 5px; }
+
+body {
+  font-family: 'rooney-web', serif; }
+
+h1, h2, h3, h4 {
+  font-family: 'brandon-grotesque', sans-serif; }
+
+h3, h4 {
+  font-weight: 300; }
+
+.photobox {
+  background: #f4f482;
+  box-shadow: 2px 2px 5px #778585; }

@@ -1,12 +1,58 @@
-.map{
-  background: $pink;
+body {
+  color: $dark;
 }
-.bar_chart{
-  background: $green;
+
+.container{
+  background: $main;
 }
-.image_gal{
-  background: $tan;
+
+form{
+  background: $light;
 }
-.data_viz{
-  background: $yellow;
+
+button{
+  background: none;
+  svg{
+    fill: $dark;
+  }
+}
+button:hover{
+  svg{
+    fill: $red;
+  }
+}
+
+.button-style {
+  color: $light;
+  background: none;
+  border: 2px solid $light;
+}
+.button-style:hover{
+  color: $green;
+  border: 2px solid $green;
+}
+
+form {
+  border: 2px solid $dark;
+  .button-style{
+    color: $dark;
+    border: 2px solid $dark;
+  }
+  .button-style:hover{
+    color: $main;
+    border: 2px solid $main;
+  }
+}
+
+.car-info {
+  box-shadow: 2px 2px 5px $dark;
+  background: $light;
+  .button-style{
+    color: $dark;
+    border: 2px solid $dark;
+  }
+  .button-style:hover{
+    color: $main;
+    border: 2px solid $main;
+  }
 }

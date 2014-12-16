@@ -1,0 +1,12 @@
+<form class="theForm" ng-submit="search()">
+  <label for="keywordTxt">
+    <input type="text" ng-model="keywordInput"/>
+  </label>
+  <button type="submit">Go!</button>
+</form>
+<div class="center-it">
+  <div class="photobox" ng-repeat="p in photoArray track by $index">
+    <img ng-src="{{p.thumb}}" />
+    <h3>{{p.title}}</h3>
+  </div>
+</div>

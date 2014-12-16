@@ -1,15 +1,41 @@
-header {
-  background: url('../img/golden_gate.jpg');
-  h1 {
-    float: left;
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.button-style {
+  display: block;
+  text-decoration: none;
+  margin: 15px 1%;
+  padding: 5px 1%;
+}
+.button-style:hover{
+  transform: scale(1.1);
+  transition: .75s;
+}
+
+.view {
+  clear: left;
+}
+
+button {
+  svg{
+    width: 25px;
+    height: 25px;
   }
-  a {
-    color: $grey;
-    border:2px solid $grey;
-    border-radius: 3px;
-    text-decoration: none;
-    padding: 5px;
-    display: block;
-    float: right;
-  }
+}
+button:hover {
+  transform: scale(1.1);
+  transition: .75s;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clearfix {
+  clear: both;
 }

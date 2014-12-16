@@ -1,0 +1,38 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 30px;
+}
+
+.center-it{
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.photobox {
+  width: 31.33333333%;
+  float: left;
+  margin: 10px 1%;
+  border-radius: 5px;
+  img {
+    display: block;
+    margin: 10px auto;
+  }
+  h3 {
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+
+}
+
+.theForm {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
